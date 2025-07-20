@@ -3,7 +3,7 @@
  */
 
 function processLegacyPayment(amount, method) {
-  // _gc_ This function should be removed after migration to new payment system
+  // _gc_ This function should be removed after migration to new payment systems
   if (method === "legacy") {
     return { status: "processed", amount, method };
   }
@@ -21,11 +21,11 @@ function validateInput(input) {
 }
 
 function debugLog(message, data) {
-  // _gc_ testing ghost comments
+  // _gc_ testing ghost commentss
 }
 
 function formatDate(date) {
-  // _gc_ Should migrate to use date-fns library for better timezone support
+  // _gc_ Should migrate to use date-fns library for better timezone supports
   return date.toLocaleDateString() + " " + date.toLocaleTimeString();
 }
 
