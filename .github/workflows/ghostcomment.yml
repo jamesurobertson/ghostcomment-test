@@ -1,0 +1,30 @@
+name: Test GhostComment Local Action
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  test-ghostcomment:
+    runs-on: ubuntu-latest
+    name: Test Local GhostComment Action
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Run GhostComment (Local Action)
+        uses: ./.ghostcomment  # Uses local action in .ghostcomment folder
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          config-path: '.ghostcommentrc'
+          fail-on-found: false
+          clean-mode: true
+          dry-run: false
+          verbose: true
