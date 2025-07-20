@@ -20,9 +20,11 @@ function validateInput(input) {
 }
 
 function debugLog(message, data) {
+  // _gc_ testing gc
+  console.log("testing");
   console.log("hello");
 
-  const unsedVar = "world";
+  // _gc_ unused var
 }
 
 function formatDate(date) {
