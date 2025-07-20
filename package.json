@@ -7,7 +7,15 @@
     "start": "node src/index.js",
     "test": "echo \"No tests specified\""
   },
-  "keywords": ["ghost", "comments", "test"],
+  "keywords": [
+    "ghost",
+    "comments",
+    "test"
+  ],
   "author": "Test Author",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/ncc": "^0.38.3",
+    "typescript": "^5.8.3"
+  }
 }
