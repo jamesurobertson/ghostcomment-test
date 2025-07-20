@@ -1,4 +1,4 @@
-name: Test GhostComment Local Action
+name: Test GhostComment Action
 
 on:
   pull_request:
@@ -11,19 +11,19 @@ permissions:
 jobs:
   test-ghostcomment:
     runs-on: ubuntu-latest
-    name: Test Local GhostComment Action
-    
+    name: Test GhostComment Action
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          
+
       - name: Run GhostComment (Published Action)
-        uses: jamesurobertson/ghostcomment@v1.0.0  # Uses published GitHub Action
+        uses: jamesurobertson/ghostcomment@v1.0.1 # Uses bundled GitHub Action
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          config-path: '.ghostcommentrc'
+          config-path: ".ghostcommentrc"
           fail-on-found: false
           clean-mode: true
           dry-run: false
