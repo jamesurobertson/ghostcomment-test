@@ -7,6 +7,8 @@ on:
 permissions:
   contents: read
   pull-requests: write
+  checks: write
+  statuses: write
 
 jobs:
   test-ghostcomment:
@@ -22,7 +24,7 @@ jobs:
       - name: Run GhostComment (Published Action)
         uses: jamesurobertson/ghostcomment@v1.0.2 # Uses bundled GitHub Action
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           config-path: ".ghostcommentrc"
           fail-on-found: false
           clean-mode: true
