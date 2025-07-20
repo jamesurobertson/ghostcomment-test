@@ -19,8 +19,8 @@ jobs:
         with:
           fetch-depth: 0
           
-      - name: Run GhostComment (Local Action)
-        uses: ./.ghostcomment  # Uses local action in .ghostcomment folder
+      - name: Run GhostComment (Published Action)
+        uses: jamesurobertson/ghostcomment@v1.0.0  # Uses published GitHub Action
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           config-path: '.ghostcommentrc'
