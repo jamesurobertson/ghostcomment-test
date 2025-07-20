@@ -1,0 +1,6 @@
+{
+  "prefix": "// _gc_",
+  "include": ["**/*.js", "**/*.ts"],
+  "exclude": ["node_modules/**", "dist/**", ".git/**"],
+  "failOnFound": false
+}
