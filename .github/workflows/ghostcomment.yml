@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: Run GhostComment (Published Action)
-        uses: jamesurobertson/ghostcomment@v1.0.2 # Uses bundled GitHub Action
+        uses: jamesurobertson/ghostcomment@v1.0.3 # Uses bundled GitHub Action
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           config-path: ".ghostcommentrc"
