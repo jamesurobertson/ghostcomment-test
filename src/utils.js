@@ -20,8 +20,7 @@ function validateInput(input) {
 }
 
 function debugLog(message, data) {
-  //_gc_ testing ghost comment
-  console.log(`[DEBUG] ${message}`, data);
+  // _gc_ testing ghost comments
 }
 
 function formatDate(date) {
