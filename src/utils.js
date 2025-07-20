@@ -3,6 +3,7 @@
  */
 
 function processLegacyPayment(amount, method) {
+  // _gc_ This function should be removed after migration to new payment system
   if (method === "legacy") {
     return { status: "processed", amount, method };
   }
@@ -24,6 +25,7 @@ function debugLog(message, data) {
 }
 
 function formatDate(date) {
+  // _gc_ Should migrate to use date-fns library for better timezone support
   return date.toLocaleDateString() + " " + date.toLocaleTimeString();
 }
 
